@@ -1,0 +1,275 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:	Mexican Fiber Website
+Version:	1.0
+Last change:	15/06/2015
+Developed By:	Aleks Iralda
+Developer URI:	twitter.com/aleksiralda
+Code Description: I use Stylus to code and optimize to reponsive with nested style. 
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+
+1. Header
+2. Index Content: 
+3. About Us Content: 
+4. Project Details
+    i. Project Details
+    ii. Project Shots
+5. Contact Us
+    i. Google Map
+
+6. Footer
+    iv. Copyright 
+    v. Go Top Button
+-------------------------------------------------------------------*/
+/*
+*
+*
+*/
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/*Prefix Styles*/
+.m0 {
+  margin: 0;
+}
+.p0 {
+  padding: 0;
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+body {
+  position: relative;
+}
+/*Floating*/
+.fleft {
+  float: left;
+}
+.fright {
+  float: right;
+}
+/*Section Fix*/
+section.row,
+header.row,
+footer.row {
+  margin: 0;
+  position: relative;
+}
+/*Ancore*/
+a,
+.btn,
+button {
+  outline: none;
+  -webkit-transition: all 300ms ease-in-out 0s;
+  transition: all 300ms ease-in-out 0s;
+}
+a:focus,
+.btn:focus,
+button:focus,
+a:hover,
+.btn:hover,
+button:hover {
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: all 300ms ease-in-out 0s;
+  transition: all 300ms ease-in-out 0s;
+}
+/*Section Padding*/
+.contentRowPad {
+  padding: 100px 0;
+}
+.contentRowPad.pb0 {
+  padding-bottom: 0;
+}
+/*Section Title*/
+.sectionTitle {
+  color: #303030;
+  text-align: center;
+  max-width: 770px;
+  margin: 0 auto 50px;
+}
+.sectionTitle h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.sectionTitle p {
+  line-height: 24px;
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  margin: 0;
+}
+/*----------------------------------------------------------------*/
+header .topRow {
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: #FFF;
+  line-height: 50px;
+  background: #303030;
+}
+header .topRow .fright .fleft + .fleft {
+  margin-left: 25px;
+}
+header .searchFormRow {
+  background: #303030;
+  border-top: 1px solid #000000;
+}
+header .searchFormRow form .input-group .form-control {
+  border-radius: 0;
+  line-height: 80px;
+  height: 80px;
+  background: none;
+  border-color: transparent;
+  font-size: 30px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  padding: 0 15px;
+  color: #fff;
+}
+header .searchFormRow form .input-group .form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: rgba(103, 103, 103, 0.2);
+}
+header .searchFormRow form .input-group .form-control:focus + .input-group-addon {
+  background: rgba(103, 103, 103, 0.2);
+}
+header .searchFormRow form .input-group .form-control::-moz-placeholder,
+header .searchFormRow form .input-group .form-control:-ms-input-placeholder,
+header .searchFormRow form .input-group .form-control::-webkit-input-placeholder {
+  color: #FFF;
+  opacity: 1;
+}
+header .searchFormRow form .input-group .input-group-addon {
+  border-radius: 0;
+  border-color: transparent;
+  background: none;
+  font-size: 30px;
+  padding: 0 15px;
+  color: #fff;
+  line-height: 80px;
+  border: none;
+}
+header .bottomRow .navbar {
+  border: none;
+  background: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+header .bottomRow .navbar .navbar-header .navbar-brand {
+  line-height: 100px;
+  height: 100px;
+  padding: 0 15px;
+  display: block;
+}
+header .bottomRow .navbar .navbar-header .navbar-brand img {
+  display: inline-block;
+  max-width: 100%;
+}
+header .bottomRow .navbar #mainNav .nav li a {
+  padding: 0 15px;
+  line-height: 100px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #303030;
+}
+header .bottomRow .navbar #mainNav .nav li a:hover {
+  background: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #f3d028;
+}
+header .bottomRow .navbar #mainNav .nav li a:focus {
+  background: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+header .bottomRow .navbar #mainNav .nav li.active a {
+  background: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #f3d028;
+  position: relative;
+}
+header .bottomRow .navbar #mainNav .nav li.active a:after {
+  width: 4px;
+  height: 4px;
+  content: '';
+  background: #f3d028;
+  display: block;
+  position: absolute;
+  top: 65px;
+  left: -webkit-calc(50% - 2px);
+  left: calc(50% - 2px);
+  border-radius: 100%;
+}
+header .bottomRow .navbar #mainNav .nav li.open a {
+  color: #f3d028;
+}
+header .bottomRow .navbar #mainNav .nav li.open a:after {
+  display: none;
+}
+header .bottomRow .navbar #mainNav .nav li.dropdown a,
+header .bottomRow .navbar #mainNav .nav li.open a {
+  background: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+header .bottomRow .navbar #mainNav .nav li.dropdown .dropdown-menu,
+header .bottomRow .navbar #mainNav .nav li.open .dropdown-menu {
+  border-radius: 0;
+}
+header .bottomRow .navbar #mainNav .nav li.dropdown .dropdown-menu li + li,
+header .bottomRow .navbar #mainNav .nav li.open .dropdown-menu li + li {
+  border-top: 1px solid rgba(48, 48, 48, 0.1);
+}
+header .bottomRow .navbar #mainNav .nav li.dropdown .dropdown-menu li a,
+header .bottomRow .navbar #mainNav .nav li.open .dropdown-menu li a {
+  line-height: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #303030;
+}
+header .bottomRow .navbar #mainNav .nav li.dropdown .dropdown-menu li a:after,
+header .bottomRow .navbar #mainNav .nav li.open .dropdown-menu li a:after {
+  display: none;
+}
+header .bottomRow .navbar #mainNav .nav > li:last-child {
+  padding: 40px 0;
+}
+header .bottomRow .navbar #mainNav .nav > li:last-child a {
+  border-left: 2px dotted #676767;
+  line-height: 20px;
+}
+header .bottomRow .navbar #mainNav .nav > li:last-child a:focus {
+  color: #303030;
+}
+header .bottomRow .navbar #mainNav .nav > li:last-child a.open {
+  color: #f3d028;
+}
+header.home2 {
+  margin-top: 30px;
+}
+header.home2 .container {
+  border-radius: 3px;
+  background: #fff;
+}
+header.home2 .searchFormRow {
+  position: absolute;
+  padding: 0;
+  border: none;
+  width: 100%;
+  background: none;
+}
+header.home2 .searchFormRow .container {
+  background: #303030;
+  padding: 0;
+}
+/*----------------------------------------------------------------*/
